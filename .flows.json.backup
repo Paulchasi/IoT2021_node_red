@@ -1,0 +1,1018 @@
+[
+    {
+        "id": "df6c810.ad3c68",
+        "type": "tab",
+        "label": "base de datos MySQL",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "fb1d2387.30f78",
+        "type": "tab",
+        "label": "conexion firebase",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e76be902.04abe8",
+        "type": "tab",
+        "label": "Dashboard",
+        "disabled": false,
+        "info": "como generar mediciones"
+    },
+    {
+        "id": "eb10eb0f.b44488",
+        "type": "tab",
+        "label": "Dashboard ANDROID",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e94b2f9d.be7d8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "85895b7a.1809b8",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "bbe82d5b.7325a",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "base_node-red",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "7f415d18.a59104",
+        "type": "firebase admin",
+        "name": "databaserealtime"
+    },
+    {
+        "id": "70307ad3.69b274",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "cec282fc.bb109",
+        "type": "ui_tab",
+        "name": "principal",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "fa3faaa2.cf4d48",
+        "type": "ui_group",
+        "name": "sensoresOn/Off",
+        "tab": "cec282fc.bb109",
+        "order": 1,
+        "disp": true,
+        "width": "3",
+        "collapse": false
+    },
+    {
+        "id": "abd458c0.b82c18",
+        "type": "ui_group",
+        "name": "EstadoSensores",
+        "tab": "cec282fc.bb109",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "147d788c.18c6e7",
+        "type": "ui_group",
+        "name": "GaugeSensores",
+        "tab": "cec282fc.bb109",
+        "order": 4,
+        "disp": true,
+        "width": "4",
+        "collapse": false
+    },
+    {
+        "id": "e19300ca.171f4",
+        "type": "mqtt-broker",
+        "name": "Broker",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "f5ef8ad5.883758",
+        "type": "ui_group",
+        "name": "barraYreceptor",
+        "tab": "cec282fc.bb109",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "abee8711.c7f668",
+        "type": "serial-port",
+        "serialport": "COM4",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "4715c12c.be1b9",
+        "type": "inject",
+        "z": "df6c810.ad3c68",
+        "name": "simularJson ",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"temperatura\":14,\"humedad\":100}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "b5ccf65c.bb3a58"
+            ]
+        ]
+    },
+    {
+        "id": "b5ccf65c.bb3a58",
+        "type": "function",
+        "z": "df6c810.ad3c68",
+        "name": "InsertSql",
+        "func": "temperatura = msg.payload.temperatura \nhumedad = msg.payload.humedad \nmsg.topic = \"insert into registrodatos (id, temperatura , humedad, fecha) values (default,\" + temperatura + \",\" + humedad + \",\" + \"CURRENT_TIMESTAMP\"+ \")\" \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 340,
+        "y": 260,
+        "wires": [
+            [
+                "399c8797.51f6b8"
+            ]
+        ]
+    },
+    {
+        "id": "399c8797.51f6b8",
+        "type": "mysql",
+        "z": "df6c810.ad3c68",
+        "mydb": "bbe82d5b.7325a",
+        "name": "registrodatos",
+        "x": 490,
+        "y": 140,
+        "wires": [
+            [
+                "947f5630.ca4458"
+            ]
+        ]
+    },
+    {
+        "id": "947f5630.ca4458",
+        "type": "debug",
+        "z": "df6c810.ad3c68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "b3cd94e.b37f968",
+        "type": "inject",
+        "z": "df6c810.ad3c68",
+        "name": "Crear tabla sql",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "CREATE TABLE `registroDatos` (`id` INT NOT NULL AUTO_INCREMENT, `temperatura` FLOAT NOT NULL, `humedad` FLOAT NOT NULL, `fecha` TIMESTAMP NOT NULL, PRIMARY KEY (`id`)) ENGINE = InnoDB",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 60,
+        "wires": [
+            [
+                "399c8797.51f6b8"
+            ]
+        ]
+    },
+    {
+        "id": "4cacd3a8.917a1c",
+        "type": "inject",
+        "z": "df6c810.ad3c68",
+        "name": "Mostrar tablas sql",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "show tables ",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 200,
+        "wires": [
+            [
+                "399c8797.51f6b8"
+            ]
+        ]
+    },
+    {
+        "id": "c60528b.65347d8",
+        "type": "inject",
+        "z": "df6c810.ad3c68",
+        "name": "Mostrar tablas",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "show Tables",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 140,
+        "wires": [
+            [
+                "399c8797.51f6b8"
+            ]
+        ]
+    },
+    {
+        "id": "b9058c4e.9a0a5",
+        "type": "inject",
+        "z": "df6c810.ad3c68",
+        "name": "consultar tabla",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Select * From registrodatos ",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "399c8797.51f6b8"
+            ]
+        ]
+    },
+    {
+        "id": "463024c3.edd63c",
+        "type": "inject",
+        "z": "df6c810.ad3c68",
+        "name": "Actualizar registro",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "update registrodatos set temperatura =24 where id=1",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 400,
+        "wires": [
+            [
+                "399c8797.51f6b8"
+            ]
+        ]
+    },
+    {
+        "id": "4dda0a8a.112724",
+        "type": "inject",
+        "z": "df6c810.ad3c68",
+        "name": "Eliminar Registros",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "delete from registrodatos where  id >3 ",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 460,
+        "wires": [
+            [
+                "399c8797.51f6b8"
+            ]
+        ]
+    },
+    {
+        "id": "e8d5693c.ecc558",
+        "type": "firebase out",
+        "z": "fb1d2387.30f78",
+        "name": "Firebase ",
+        "ref": "registrodatos",
+        "operation": "set",
+        "admin": "7f415d18.a59104",
+        "x": 520,
+        "y": 160,
+        "wires": [
+            [
+                "12e76579.24e5fb"
+            ]
+        ]
+    },
+    {
+        "id": "190f7536.ea6e7b",
+        "type": "inject",
+        "z": "fb1d2387.30f78",
+        "name": "simular Json",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"temperatura\":50,\"humedad\":70}",
+        "payloadType": "json",
+        "x": 350,
+        "y": 160,
+        "wires": [
+            [
+                "e8d5693c.ecc558"
+            ]
+        ]
+    },
+    {
+        "id": "12e76579.24e5fb",
+        "type": "debug",
+        "z": "fb1d2387.30f78",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "1a0e7230.5faf1e",
+        "type": "firebase in",
+        "z": "fb1d2387.30f78",
+        "name": "consulta ",
+        "ref": "registrodatos",
+        "dataAtStart": true,
+        "admin": "7f415d18.a59104",
+        "x": 490,
+        "y": 300,
+        "wires": [
+            [
+                "ae1a0fc0.704bd"
+            ]
+        ]
+    },
+    {
+        "id": "ae1a0fc0.704bd",
+        "type": "debug",
+        "z": "fb1d2387.30f78",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1481afe4.dd43c",
+        "type": "ui_switch",
+        "z": "e76be902.04abe8",
+        "name": "",
+        "label": "on/off",
+        "tooltip": "",
+        "group": "fa3faaa2.cf4d48",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "estado",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 320,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5717400.b8dff8",
+        "type": "ui_chart",
+        "z": "e76be902.04abe8",
+        "name": "",
+        "group": "abd458c0.b82c18",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "temperatura y humedad",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 530,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5cb6c102.99e3b",
+        "type": "ui_gauge",
+        "z": "e76be902.04abe8",
+        "name": "",
+        "group": "147d788c.18c6e7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 490,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "b7f95990.a46238",
+        "type": "inject",
+        "z": "e76be902.04abe8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Temperatura",
+        "payload": "27",
+        "payloadType": "num",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "c5717400.b8dff8",
+                "5cb6c102.99e3b"
+            ]
+        ]
+    },
+    {
+        "id": "93f93e4e.9297",
+        "type": "inject",
+        "z": "e76be902.04abe8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Humedad",
+        "payload": "100",
+        "payloadType": "num",
+        "x": 200,
+        "y": 220,
+        "wires": [
+            [
+                "c5717400.b8dff8"
+            ]
+        ]
+    },
+    {
+        "id": "86266694.046238",
+        "type": "inject",
+        "z": "eb10eb0f.b44488",
+        "name": "ciclo de simulacion",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "f143fad1.92db58"
+            ]
+        ]
+    },
+    {
+        "id": "f143fad1.92db58",
+        "type": "random",
+        "z": "eb10eb0f.b44488",
+        "name": "Simulacion",
+        "low": 1,
+        "high": 10,
+        "inte": "true",
+        "property": "payload",
+        "x": 390,
+        "y": 120,
+        "wires": [
+            [
+                "668dcab8.e03674",
+                "4f952e43.b8d84"
+            ]
+        ]
+    },
+    {
+        "id": "668dcab8.e03674",
+        "type": "debug",
+        "z": "eb10eb0f.b44488",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "4f952e43.b8d84",
+        "type": "mqtt out",
+        "z": "eb10eb0f.b44488",
+        "name": "",
+        "topic": "UR/PVC/APP",
+        "qos": "2",
+        "retain": "",
+        "broker": "e19300ca.171f4",
+        "x": 600,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "75fdbdb3.8d2c14",
+        "type": "inject",
+        "z": "e94b2f9d.be7d8",
+        "name": "ciclo de simulacion ",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "f12cdfc5.54452"
+            ]
+        ]
+    },
+    {
+        "id": "f12cdfc5.54452",
+        "type": "random",
+        "z": "e94b2f9d.be7d8",
+        "name": "Aleatorio ",
+        "low": 1,
+        "high": 10,
+        "inte": "true",
+        "property": "payload",
+        "x": 400,
+        "y": 200,
+        "wires": [
+            [
+                "204a3dc0.2bf752",
+                "a0415ef5.f8e0a"
+            ]
+        ]
+    },
+    {
+        "id": "a0415ef5.f8e0a",
+        "type": "mqtt out",
+        "z": "e94b2f9d.be7d8",
+        "name": "",
+        "topic": "UR/PVC/1",
+        "qos": "",
+        "retain": "",
+        "broker": "e19300ca.171f4",
+        "x": 590,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "204a3dc0.2bf752",
+        "type": "debug",
+        "z": "e94b2f9d.be7d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "5c1399b8.9b4a18",
+        "type": "serial in",
+        "z": "85895b7a.1809b8",
+        "name": "rx",
+        "serial": "abee8711.c7f668",
+        "x": 570,
+        "y": 240,
+        "wires": [
+            [
+                "493e7294.70349c",
+                "8ef13c44.7a05a",
+                "9950dad8.ff56e8"
+            ]
+        ]
+    },
+    {
+        "id": "86fd233.bdba2e",
+        "type": "serial out",
+        "z": "85895b7a.1809b8",
+        "name": "tx",
+        "serial": "abee8711.c7f668",
+        "x": 570,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "493e7294.70349c",
+        "type": "ui_gauge",
+        "z": "85895b7a.1809b8",
+        "name": "",
+        "group": "f5ef8ad5.883758",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 750,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "8ef13c44.7a05a",
+        "type": "debug",
+        "z": "85895b7a.1809b8",
+        "name": "salida",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "9950dad8.ff56e8",
+        "type": "ui_text",
+        "z": "85895b7a.1809b8",
+        "group": "f5ef8ad5.883758",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 760,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "fe78bede.41e65",
+        "type": "inject",
+        "z": "85895b7a.1809b8",
+        "name": "envio un 4",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "4",
+        "payloadType": "str",
+        "x": 320,
+        "y": 160,
+        "wires": [
+            [
+                "86fd233.bdba2e"
+            ]
+        ]
+    }
+]
